@@ -1,0 +1,7 @@
+<!-- films/templates/films/film_list.html -->
+<h1>Film List</h1>
+<ul>
+    {% for film in films %}
+        <li><a href="{% url 'film_detail' film.id %}">{{ film.title }}</a></li>
+    {% endfor %}
+</ul>

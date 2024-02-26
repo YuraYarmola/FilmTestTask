@@ -1,0 +1,7 @@
+<!-- films/templates/films/film_form.html -->
+<h1>Create Film</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" value="Save">Submit</button>
+</form>
