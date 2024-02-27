@@ -17,7 +17,7 @@ class Film(models.Model):
     actors = models.ManyToManyField(Actor, null=True, blank=True)
     director = models.ManyToManyField(Director, null=True, blank=True)
 
-    poster = models.ImageField(upload_to='posters/', null=True, blank=True)
+    poster = models.ImageField(upload_to='posters/%m-%d/', null=True, blank=True)
 
     def __str__(self):
         return self.title

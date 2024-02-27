@@ -11,31 +11,21 @@ class FilmListView(ListView):
     model = Film
     template_name = 'films/film_list.html'
     context_object_name = 'films'
+    paginate_by = 25
+
+    def get_queryset(self):
+        return Film.objects.all().order_by('-release_date')
 
 
 class FilmDetailView(DetailView):
     model = Film
-    template_name = 'films/film_list.html'
+    template_name = 'films/film_detail.html'
     context_object_name = 'film'
 
 
-class ActorListView(ListView):
-    model = Actor
-    template_name = 'films/actor_list.html'
-    context_object_name = 'actors'
-
 
 class FilmCreateView(CreateView):
-    def get(self, request, *args, **kwargs):
-        context = {'form': FilmCreateForm()}
-        return render(request, 'films/film_form.html', context)
-
-    def post(self, request, *args, **kwargs):
-        form = FilmCreateForm(request.POST)
-        if form.is_valid():
-            print("ok")
-            film = form.save()
-            film.save()
-            return HttpResponseRedirect(reverse_lazy('film_detail', args=[film.id]))
-
-        return render(request, 'films/film_form.html', {'form': form})
+    model = Film
+    template_name = 'films/film_form.html'
+    fields = ['title', 'description', 'release_date', 'language', 'country', 'plot', 'rating', 'actors', 'director', 'poster']
+    success_url = reverse_lazy('film_list')

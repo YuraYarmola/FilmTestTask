@@ -1,0 +1,16 @@
+<!-- films/templates/films/actor_list.html -->
+{% extends 'films/base.html' %}
+
+{% block content %}
+    <a href="{% url 'add_actor' %}" > <button class="details-button"> Add new actor</button></a>
+    <h2>Actor List</h2>
+    <ul>
+        {% for actor in actors %}
+            <li>{{ actor.name }} {{ actor.last_name }}  <a href="{% url 'delete_actor' actor.id %}"><button>Delete</button></a></li>
+            <!-- Add other actor details as needed -->
+        {% endfor %}
+    </ul>
+
+
+
+{% endblock %}

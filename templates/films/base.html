@@ -1,0 +1,177 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Film Site{% endblock %}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #content {
+            margin: 20px;
+        }
+
+
+        .film-detail-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+
+    }
+
+    .film-detail-main-text{
+        margin-top: 20px;
+        margin-left: 40px;
+
+    }
+    .film-detail-info {
+        width: 80%; /* Adjust the width as needed */
+    }
+    .film-detail-main-info{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .film-detail-poster {
+    width: 400px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    margin-top: 20px;
+    object-fit: cover; /* Preserve aspect ratio and cover the entire container */
+}
+    .film-list-poster {
+    width: 200px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    margin-top: 20px;
+    object-fit: cover; /* Preserve aspect ratio and cover the entire container */
+}
+    .details-button {
+        padding: 10px;
+        background-color: #4CAF50; /* Green color, you can customize this */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 20px;
+    }
+    li::marker {
+      color: red; /* Change the color of the number */
+      font-size: 20px; /* Change the font size of the number */
+}
+
+    .details-button:hover {
+        background-color: #45a049; /* Darker green on hover, you can customize this */
+    }
+
+    .film-item {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .film-poster {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination a {
+        padding: 8px 16px;
+        text-decoration: none;
+        background-color: #4f87ec;
+        color: #00ff51;
+        font-size: 20px;
+        border: 1px solid #ddd;
+    }
+
+    .pagination a:hover {
+        background-color: #ee1c1c;
+    }
+
+    .pagination .current {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 20px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Film Site</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'film_list' %}">Home</a></li>
+                <li><a href="{% url 'film_create' %}">Add Film</a></li>
+                <li><a href="{% url 'actor_list' %}">Actors</a></li>
+                <li><a href="{% url 'director_list' %}">Directors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+
+     <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+        {% if page_obj.paginator %}
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+        {% endif %}
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
+
+    <!-- Add your JS scripts or other scripts here if needed -->
+</body>
+</html>

@@ -1,7 +1,31 @@
 <!-- films/templates/films/film_list.html -->
-<h1>Film List</h1>
-<ul>
+{% extends 'films/base.html' %}
+
+{% block content %}
+    <h2>Film List</h2>
+
     {% for film in films %}
-        <li><a href="{% url 'film_detail' film.id %}">{{ film.title }}</a></li>
+
+        <div class="film-item">
+            <h3>{{ film.title }}</h3>
+            <div class="film-detail-main-info">
+            {% if film.poster %}
+                <img src="{{ film.poster.url }}" alt="{{ film.title }} Poster" class="film-list-poster">
+            {% endif %}
+                <div class="film-detail-main-text">
+            <p><strong>Release Date:</strong> {{ film.release_date }}</p>
+
+            <p>{{ film.description|truncatewords:100}}</p>
+                    </div>
+            </div>
+
+            <a href="{% url 'film_detail' film.id %}">
+                <button type="button" class="details-button">View Details</button>
+            </a>
+
+        </div>
     {% endfor %}
-</ul>
+
+
+{% endblock %}
+

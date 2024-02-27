@@ -1,0 +1,14 @@
+<!-- films/templates/films/director_list.html -->
+{% extends 'films/base.html' %}
+
+{% block content %}
+            <a href="{% url 'add_director' %}"> <button class="details-button"> Add new director</button></a>
+    <h2>Director List</h2>
+
+    <ul>
+        {% for director in directors %}
+            <li>{{ director.name }} {{ director.last_name }}  <a href="{% url 'delete_director' director.id %}"><button>Delete</button></a></li>
+            <!-- Add other director details as needed -->
+        {% endfor %}
+    </ul>
+{% endblock %}

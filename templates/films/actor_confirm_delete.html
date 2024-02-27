@@ -1,0 +1,12 @@
+<!-- films/templates/films/actor_confirm_delete.html -->
+{% extends 'films/base.html' %}
+
+{% block content %}
+    <h2>Confirm Delete Actor</h2>
+    <p>Are you sure you want to delete the actor "{{ object.name }}"?</p>
+    <form method="post" action="{% url 'delete_actor' object.id %}">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+        <a href="{% url 'actor_list' %}">Cancel</a>
+    </form>
+{% endblock %}

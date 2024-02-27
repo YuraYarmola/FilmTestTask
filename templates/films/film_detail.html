@@ -1,4 +1,43 @@
 <!-- films/templates/films/film_detail.html -->
-<h1>{{ film.title }}</h1>
-<p>{{ film.description }}</p>
-<!-- Display other film details -->
+{% extends 'films/base.html' %}
+
+{% block content %}
+    <div class="film-detail-container">
+        <div class="film-detail-info">
+
+            <h1>{{ film.title }}</h1>
+
+            <div class="film-detail-main-info">
+
+            {% if film.poster %}
+                <img src="{{ film.poster.url }}" alt="{{ film.title }} Poster" class="film-detail-poster">
+            {% endif %}
+
+            <div class="film-detail-main-text">
+            <p><strong>Release Date:</strong> {{ film.release_date }}</p>
+            <p><strong>Language:</strong> {{ film.language }}</p>
+            <p><strong>Country:</strong> {{ film.country }}</p>
+            <p><strong>Plot:</strong> {{ film.plot }}</p>
+            <p><strong>Rating:</strong> {{ film.rating }}</p>
+
+            <p><strong>Actors:</strong>
+                {% for actor in film.actors.all %}
+                    {{ actor.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+
+            <p><strong>Directors:</strong>
+                {% for director in film.director.all %}
+                    {{ director.name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+            </div>
+                </div>
+
+            <div class="film-detail-description"><p>{{ film.description }}</p><div>
+        </div>
+
+
+    </div>
+{% endblock %}
+
