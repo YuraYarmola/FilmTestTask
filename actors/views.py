@@ -14,7 +14,7 @@ class ActorListView(ListView):
     model = Actor
     template_name = 'films/actor_list.html'
     context_object_name = 'actors'
-    paginate_by = 2  # Adjust as needed
+    paginate_by = 25  # Adjust as needed
 
     def get_queryset(self):
         return Actor.objects.all()

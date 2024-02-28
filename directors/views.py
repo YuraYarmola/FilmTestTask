@@ -34,7 +34,7 @@ class DirectorListView(ListView):
     model = Director
     template_name = 'films/director_list.html'
     context_object_name = 'directors'
-    paginate_by = 2  # Adjust as needed
+    paginate_by = 25  # Adjust as needed
 
     def get_queryset(self):
         return Director.objects.all()
