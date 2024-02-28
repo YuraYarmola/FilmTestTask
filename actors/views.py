@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import ListView, DeleteView
+from django.views.generic import ListView, DeleteView, UpdateView
 
 from directors.models import Director
 from .models import Actor
@@ -40,3 +40,10 @@ class ActorCreateView(View):
             form.save()
             return redirect('actor_list')  # Redirect to a page displaying a list of actors
         return render(request, self.template_name, {'form': form})
+
+
+class ActorUpdateView(UpdateView):
+    model = Actor
+    template_name = 'films/actor_form.html'
+    fields = ['name', 'last_name']
+    success_url = reverse_lazy('actor_list')

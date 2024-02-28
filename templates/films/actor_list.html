@@ -4,9 +4,21 @@
 {% block content %}
     <a href="{% url 'add_actor' %}" > <button class="details-button"> Add new actor</button></a>
     <h2>Actor List</h2>
-    <ul>
+    <ul class="list-actor-director">
         {% for actor in actors %}
-            <li>{{ actor.name }} {{ actor.last_name }}  <a href="{% url 'delete_actor' actor.id %}"><button>Delete</button></a></li>
+            <li>{{ actor.name }} {{ actor.last_name }}
+
+                <a href="{% url 'edit_actor' actor.id %}" class="edit_film" target="_blank">
+                    Edit
+                </a>
+                <a href="{% url 'delete_actor' actor.id %}" class="button_delete" target="_blank">
+                    Delete
+                </a>
+
+
+            </li>
+
+
             <!-- Add other actor details as needed -->
         {% endfor %}
     </ul>

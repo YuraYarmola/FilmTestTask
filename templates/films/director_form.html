@@ -1,10 +1,10 @@
 {% extends 'films/base.html' %}
 
 {% block content %}
-    <h2>Add Director</h2>
+    <h2>Director editor</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Add Director</button>
+        <button type="submit">Submit</button>
     </form>
 {% endblock %}

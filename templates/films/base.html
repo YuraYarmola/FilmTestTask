@@ -82,6 +82,38 @@
         border-radius: 4px;
         cursor: pointer;
         margin: 20px;
+        text-decoration: none;
+
+    }
+
+    .button_delete{
+        padding: 3px;
+        background-color: #991110; /* Green color, you can customize this */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 20px;
+        text-decoration: none;
+    }
+
+    .edit_film {
+        padding: 3px;
+        background-color: #4C4F90; /* Green color, you can customize this */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .list-actor-director
+    {
+        margin: 20px;
+        padding: 20px;
+    }
+    .list-actor-director li{
+        margin: 10px;
     }
     li::marker {
       color: red; /* Change the color of the number */
@@ -137,8 +169,7 @@
         <h1>My Film Site</h1>
         <nav>
             <ul>
-                <li><a href="{% url 'film_list' %}">Home</a></li>
-                <li><a href="{% url 'film_create' %}">Add Film</a></li>
+                <li><a href="{% url 'film_list' %}">Films</a></li>
                 <li><a href="{% url 'actor_list' %}">Actors</a></li>
                 <li><a href="{% url 'director_list' %}">Directors</a></li>
             </ul>

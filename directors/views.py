@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import ListView, DeleteView
+from django.views.generic import ListView, DeleteView, UpdateView
 
 from .models import Director
 from .forms import DirectorForm
@@ -30,8 +30,19 @@ class DirectorDeleteView(DeleteView):
 
 
 class DirectorListView(ListView):
+    # pass
+    model = Director
     template_name = 'films/director_list.html'
+    context_object_name = 'directors'
+    paginate_by = 2  # Adjust as needed
 
-    def get(self, request):
-        directors = Director.objects.all()
-        return render(request, self.template_name, {'directors': directors})
+    def get_queryset(self):
+        return Director.objects.all()
+
+
+
+class DirectorUpdateView(UpdateView):
+    model = Director
+    template_name = 'films/director_form.html'
+    fields = ['name', 'last_name']
+    success_url = reverse_lazy('director_list')

@@ -2,12 +2,34 @@
 {% extends 'films/base.html' %}
 
 {% block content %}
-    <h2>Film List</h2>
+<a href="{% url 'film_create' %}" class="details-button"  target="_blank">Add Film</a>
+
+
+<br>
+
+<br>
+
+
+    <h3>Filters:</h3>
+     <form method="get">
+        {{ filter.form.as_p }}
+        <button type="submit">Apply Filters</button>
+    </form>
+<br>
+<br>
+            <h2>Film List</h2>
 
     {% for film in films %}
 
         <div class="film-item">
             <h3>{{ film.title }}</h3>
+            <a href="{% url 'edit_film' film.id %}" class="edit_film">
+                Edit
+            </a>
+            <a href="{% url 'delete_film' film.id %}" class="button_delete">
+                Delete
+            </a>
+
             <div class="film-detail-main-info">
             {% if film.poster %}
                 <img src="{{ film.poster.url }}" alt="{{ film.title }} Poster" class="film-list-poster">

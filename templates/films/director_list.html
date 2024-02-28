@@ -3,11 +3,22 @@
 
 {% block content %}
             <a href="{% url 'add_director' %}"> <button class="details-button"> Add new director</button></a>
+
     <h2>Director List</h2>
 
     <ul>
         {% for director in directors %}
-            <li>{{ director.name }} {{ director.last_name }}  <a href="{% url 'delete_director' director.id %}"><button>Delete</button></a></li>
+            <li>{{ director.name }} {{ director.last_name }}
+
+                <a href="{% url 'edit_director' director.id %}" class="edit_film" target="_blank">
+                    Edit
+                </a>
+
+                <a href="{% url 'delete_director' director.id %}" class="button_delete" target="_blank">
+                    Delete
+                </a>
+
+            </li>
             <!-- Add other director details as needed -->
         {% endfor %}
     </ul>
