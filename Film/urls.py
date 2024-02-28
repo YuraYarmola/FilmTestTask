@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('films.urls')),
     path('', include('actors.urls')),
-    path('', include('directors.urls'))
+    path('', include('directors.urls')),
 ]
 
 if settings.DEBUG:

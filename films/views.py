@@ -1,5 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.views import View
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -47,3 +48,7 @@ class FilmDeleteView(DeleteView):
     model = Film
     success_url = reverse_lazy('film_list')
     template_name = 'films/film_delete_confirmation.html'
+
+class RedirectView(View):
+    def get(self, request, *args, **kwargs):
+        return HttpResponseRedirect(reverse_lazy('film_list'))
