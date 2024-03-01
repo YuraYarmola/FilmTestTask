@@ -8,5 +8,7 @@ urlpatterns = [
     path('actors/<int:pk>/delete/', ActorDeleteView.as_view(), name='delete_actor'),
     path('actors/<int:pk>/edit/', ActorUpdateView.as_view(), name='edit_actor'),
 
+    path('api/actors/', ActorListAPIView.as_view(), name='actor_list_api'),
+    path('api/actors/<int:pk>/', ActorDetailAPIView.as_view(), name='actor_detail_api'),
 
 ]

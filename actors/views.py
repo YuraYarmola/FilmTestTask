@@ -1,12 +1,13 @@
-
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DeleteView, UpdateView
-
-from directors.models import Director
+from rest_framework import generics
+from rest_framework.pagination import PageNumberPagination, LimitOffsetPagination
+from rest_framework.permissions import AllowAny
 from .models import Actor
 from .forms import ActorForm
+from .serializers import ActorSerializer
 
 
 class ActorListView(ListView):
@@ -18,7 +19,6 @@ class ActorListView(ListView):
 
     def get_queryset(self):
         return Actor.objects.all()
-
 
 
 class ActorDeleteView(DeleteView):
@@ -47,3 +47,19 @@ class ActorUpdateView(UpdateView):
     template_name = 'films/actor_form.html'
     fields = ['name', 'last_name']
     success_url = reverse_lazy('actor_list')
+
+
+class ActorListAPIView(generics.ListCreateAPIView, PageNumberPagination):
+    queryset = Actor.objects.all()
+    serializer_class = ActorSerializer
+    permission_classes = [AllowAny]
+    pagination_class = LimitOffsetPagination
+    page_size = 25
+    max_page_size = 50
+    page_size_query_param = 'page_size'
+
+
+class ActorDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Actor.objects.all()
+    serializer_class = ActorSerializer
+    permission_classes = [AllowAny]
