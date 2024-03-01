@@ -1,0 +1,453 @@
+System check identified some issues:
+
+WARNINGS:
+films.Film.actors: (fields.W340) null has no effect on ManyToManyField.
+films.Film.director: (fields.W340) null has no effect on ManyToManyField.
+
+System check identified 2 issues (0 silenced).
+[28/Feb/2024 21:38:50] "GET /films/ HTTP/1.1" 200 8393
+/root/FilmTestTask/venv/lib/python3.11/site-packages/django/views/generic/list.py:91: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'actors.models.Actor'> QuerySet.
+  return self.paginator_class(
+[28/Feb/2024 21:38:52] "GET /actors/ HTTP/1.1" 200 5666
+/root/FilmTestTask/venv/lib/python3.11/site-packages/django/views/generic/list.py:91: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'directors.models.Director'> QuerySet.
+  return self.paginator_class(
+[28/Feb/2024 21:38:52] "GET /directors/ HTTP/1.1" 200 4925
+[28/Feb/2024 21:38:53] "GET /actors/ HTTP/1.1" 200 5666
+[28/Feb/2024 21:38:53] "GET /films/ HTTP/1.1" 200 8393
+[28/Feb/2024 21:38:58] "GET /films/124 HTTP/1.1" 301 0
+[28/Feb/2024 21:38:58] "GET /films/124/ HTTP/1.1" 404 179
+[28/Feb/2024 21:39:04] "GET /films/ HTTP/1.1" 200 8393
+[28/Feb/2024 21:40:24] "GET /films/create/ HTTP/1.1" 200 6263
+[28/Feb/2024 21:42:21] "POST /films/create/ HTTP/1.1" 302 0
+[28/Feb/2024 21:42:21] "GET /films/ HTTP/1.1" 200 10065
+[28/Feb/2024 21:42:21] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 200 24712
+[28/Feb/2024 21:42:29] "GET /films/3/ HTTP/1.1" 200 8267
+[28/Feb/2024 21:42:29] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:42:41] "GET /films/ HTTP/1.1" 200 10065
+[28/Feb/2024 21:42:41] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:42:45] "GET /actors/ HTTP/1.1" 200 5666
+[28/Feb/2024 21:42:47] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:43:02] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:43:02] "GET /actors/ HTTP/1.1" 200 6041
+[28/Feb/2024 21:43:29] "GET /directors/ HTTP/1.1" 200 4925
+[28/Feb/2024 21:43:31] "GET /directors/add/ HTTP/1.1" 200 4829
+[28/Feb/2024 21:43:44] "POST /directors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:43:44] "GET /directors/ HTTP/1.1" 200 5305
+[28/Feb/2024 21:43:46] "GET /actors/ HTTP/1.1" 200 6041
+[28/Feb/2024 21:44:01] "GET /actors/ HTTP/1.1" 200 6041
+[28/Feb/2024 21:44:01] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:44:10] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:44:10] "GET /actors/ HTTP/1.1" 200 6410
+[28/Feb/2024 21:44:11] "GET /films/ HTTP/1.1" 200 10205
+[28/Feb/2024 21:44:12] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:44:12] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:44:12] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 304 0
+[28/Feb/2024 21:44:12] "GET /films/ HTTP/1.1" 200 10205
+[28/Feb/2024 21:44:14] "GET /films/3/edit/ HTTP/1.1" 200 9742
+[28/Feb/2024 21:44:22] "POST /films/3/edit/ HTTP/1.1" 302 0
+[28/Feb/2024 21:44:22] "GET /films/ HTTP/1.1" 200 10205
+[28/Feb/2024 21:44:24] "GET /films/3/ HTTP/1.1" 200 8400
+[28/Feb/2024 21:44:24] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:44:54] "GET /films/ HTTP/1.1" 200 10205
+[28/Feb/2024 21:44:54] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:45:35] "GET /actors/ HTTP/1.1" 200 6410
+[28/Feb/2024 21:45:53] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:46:00] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:46:00] "GET /actors/ HTTP/1.1" 200 6787
+[28/Feb/2024 21:46:11] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:46:20] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:46:20] "GET /actors/ HTTP/1.1" 200 7158
+[28/Feb/2024 21:46:35] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:46:43] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:46:43] "GET /actors/ HTTP/1.1" 200 7529
+[28/Feb/2024 21:46:50] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:46:57] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:46:57] "GET /actors/ HTTP/1.1" 200 7900
+[28/Feb/2024 21:47:09] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:47:20] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:47:20] "GET /actors/ HTTP/1.1" 200 8270
+[28/Feb/2024 21:47:25] "GET /directors/ HTTP/1.1" 200 5305
+[28/Feb/2024 21:47:25] "GET /directors/add/ HTTP/1.1" 200 4829
+[28/Feb/2024 21:47:38] "POST /directors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:47:38] "GET /directors/ HTTP/1.1" 200 5681
+[28/Feb/2024 21:47:39] "GET /films/ HTTP/1.1" 200 10481
+[28/Feb/2024 21:47:39] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:47:40] "GET /films/create/ HTTP/1.1" 200 6679
+[28/Feb/2024 21:49:11] "POST /films/create/ HTTP/1.1" 302 0
+[28/Feb/2024 21:49:12] "GET /films/ HTTP/1.1" 200 11738
+[28/Feb/2024 21:49:12] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 200 46159
+[28/Feb/2024 21:49:12] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:50:41] "GET /films/create/ HTTP/1.1" 200 6679
+[28/Feb/2024 21:51:44] "POST /films/create/ HTTP/1.1" 302 0
+[28/Feb/2024 21:51:44] "GET /films/ HTTP/1.1" 200 13144
+[28/Feb/2024 21:51:44] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:51:44] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 200 92394
+[28/Feb/2024 21:51:44] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:51:44] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 304 0
+[28/Feb/2024 21:51:44] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:51:52] "GET /actors/ HTTP/1.1" 200 8270
+[28/Feb/2024 21:51:54] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:52:15] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:52:15] "GET /actors/ HTTP/1.1" 200 8643
+[28/Feb/2024 21:52:16] "GET /directors/ HTTP/1.1" 200 5681
+[28/Feb/2024 21:52:18] "GET /directors/add/ HTTP/1.1" 200 4829
+[28/Feb/2024 21:52:32] "POST /directors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:52:32] "GET /directors/ HTTP/1.1" 200 6060
+[28/Feb/2024 21:52:38] "GET /directors/add/ HTTP/1.1" 200 4829
+[28/Feb/2024 21:52:47] "POST /directors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:52:47] "GET /directors/ HTTP/1.1" 200 6437
+[28/Feb/2024 21:52:49] "GET /films/ HTTP/1.1" 200 13279
+[28/Feb/2024 21:52:49] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:52:49] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:52:49] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:52:54] "GET /films/5/edit/ HTTP/1.1" 200 8368
+[28/Feb/2024 21:53:01] "POST /films/5/edit/ HTTP/1.1" 302 0
+[28/Feb/2024 21:53:01] "GET /films/ HTTP/1.1" 200 13279
+[28/Feb/2024 21:53:01] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:53:04] "GET /films/5/ HTTP/1.1" 200 6589
+[28/Feb/2024 21:53:08] "GET /films/ HTTP/1.1" 200 13279
+[28/Feb/2024 21:53:08] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:53:12] "GET /actors/ HTTP/1.1" 200 8643
+[28/Feb/2024 21:53:59] "GET /actors/ HTTP/1.1" 200 8643
+[28/Feb/2024 21:54:00] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:54:06] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:54:06] "GET /actors/ HTTP/1.1" 200 9017
+[28/Feb/2024 21:54:13] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:54:21] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:54:21] "GET /actors/ HTTP/1.1" 200 9390
+[28/Feb/2024 21:54:27] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:54:35] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:54:36] "GET /actors/ HTTP/1.1" 200 9767
+[28/Feb/2024 21:54:43] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:54:51] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:54:51] "GET /actors/ HTTP/1.1" 200 10141
+[28/Feb/2024 21:54:59] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:55:06] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:55:06] "GET /actors/ HTTP/1.1" 200 10510
+[28/Feb/2024 21:55:19] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:55:26] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:55:26] "GET /actors/ HTTP/1.1" 200 10884
+[28/Feb/2024 21:55:34] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:55:40] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:55:40] "GET /actors/ HTTP/1.1" 200 11258
+[28/Feb/2024 21:55:47] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:55:53] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:55:53] "GET /actors/ HTTP/1.1" 200 11630
+[28/Feb/2024 21:56:02] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:56:08] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:56:09] "GET /actors/ HTTP/1.1" 200 12002
+[28/Feb/2024 21:56:23] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:56:30] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:56:30] "GET /actors/ HTTP/1.1" 200 12372
+[28/Feb/2024 21:56:51] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:56:57] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:56:57] "GET /actors/ HTTP/1.1" 200 12745
+[28/Feb/2024 21:57:03] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:57:09] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:57:09] "GET /actors/ HTTP/1.1" 200 13118
+[28/Feb/2024 21:57:16] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:57:26] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:57:26] "GET /actors/ HTTP/1.1" 200 13491
+[28/Feb/2024 21:57:29] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:57:41] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:57:41] "GET /actors/ HTTP/1.1" 200 13863
+[28/Feb/2024 21:57:50] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:57:56] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:57:57] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 21:58:05] "GET /actors/add/ HTTP/1.1" 200 4826
+[28/Feb/2024 21:58:18] "POST /actors/add/ HTTP/1.1" 302 0
+[28/Feb/2024 21:58:19] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 21:58:20] "GET /actors/?page=2 HTTP/1.1" 200 5398
+[28/Feb/2024 21:58:22] "GET /actors/?page=1 HTTP/1.1" 200 13970
+[28/Feb/2024 21:58:31] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 21:58:31] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:58:31] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:58:31] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[28/Feb/2024 21:59:36] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 21:59:36] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 21:59:36] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 200 46159
+[28/Feb/2024 21:59:36] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 200 24712
+[28/Feb/2024 21:59:36] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 200 92394
+[28/Feb/2024 21:59:36] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 200 26892
+[28/Feb/2024 21:59:36] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 200 20588
+[28/Feb/2024 21:59:42] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 21:59:45] "GET /directors/ HTTP/1.1" 200 6437
+[28/Feb/2024 21:59:47] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 21:59:52] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 21:59:53] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:00:04] "GET /films/4/ HTTP/1.1" 200 7199
+[28/Feb/2024 22:00:08] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:01:02] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 22:01:03] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:01:03] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:01:04] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:01:17] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 22:01:17] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:01:17] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 200 26892
+[28/Feb/2024 22:01:17] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 200 24712
+[28/Feb/2024 22:01:17] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 200 46159
+[28/Feb/2024 22:01:17] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 200 20588
+[28/Feb/2024 22:01:17] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 200 92394
+[28/Feb/2024 22:01:18] "GET /favicon.ico HTTP/1.1" 404 179
+[28/Feb/2024 22:01:28] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 22:01:29] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:01:30] "GET /directors/ HTTP/1.1" 200 6437
+[28/Feb/2024 22:01:32] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:01:46] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 22:01:46] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:01:47] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:01:48,466] - Broken pipe from ('45.12.24.160', 16718)
+[28/Feb/2024 22:01:48,467] - Broken pipe from ('45.12.24.160', 12447)
+[28/Feb/2024 22:01:48,467] - Broken pipe from ('45.12.24.160', 53986)
+[28/Feb/2024 22:01:48,468] - Broken pipe from ('45.12.24.160', 21562)
+[28/Feb/2024 22:01:48,468] - Broken pipe from ('45.12.24.160', 22597)
+[28/Feb/2024 22:26:12] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 22:26:13] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:26:13] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:26:13] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:26:13] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 304 0
+[28/Feb/2024 22:26:13] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:26:13] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[28/Feb/2024 22:26:34] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 22:26:35] "GET /directors/ HTTP/1.1" 200 6437
+[28/Feb/2024 22:26:36] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 22:26:36] "GET /directors/ HTTP/1.1" 200 6437
+[28/Feb/2024 22:26:38] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 22:26:39] "GET /directors/ HTTP/1.1" 200 6437
+[28/Feb/2024 22:26:40] "GET /actors/ HTTP/1.1" 200 13970
+[28/Feb/2024 22:26:41] "GET /actors/?page=2 HTTP/1.1" 200 5398
+[28/Feb/2024 22:26:43] "GET /actors/?page=1 HTTP/1.1" 200 13970
+[28/Feb/2024 22:26:45] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 22:26:53] "GET /films/4/ HTTP/1.1" 200 7199
+[28/Feb/2024 23:19:59,493] - Broken pipe from ('199.45.154.49', 38468)
+[28/Feb/2024 23:20:02] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 23:20:03,287] - Broken pipe from ('199.45.154.49', 38478)
+[28/Feb/2024 23:20:06] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 23:20:07] code 505, message Invalid HTTP version (2.0)
+[28/Feb/2024 23:20:07] "PRI * HTTP/2.0" 505 -
+[28/Feb/2024 23:20:11] "GET /films HTTP/1.1" 301 0
+[28/Feb/2024 23:20:11] code 505, message Invalid HTTP version (2.0)
+[28/Feb/2024 23:20:11] "PRI * HTTP/2.0" 505 -
+[28/Feb/2024 23:20:16] "GET /films HTTP/1.1" 301 0
+[28/Feb/2024 23:20:17] code 505, message Invalid HTTP version (2.0)
+[28/Feb/2024 23:20:17] "PRI * HTTP/2.0" 505 -
+[28/Feb/2024 23:20:21] "GET /films HTTP/1.1" 301 0
+[28/Feb/2024 23:20:22] code 505, message Invalid HTTP version (2.0)
+[28/Feb/2024 23:20:22] "PRI * HTTP/2.0" 505 -
+[28/Feb/2024 23:20:26] "GET /films HTTP/1.1" 301 0
+[28/Feb/2024 23:20:27] code 505, message Invalid HTTP version (2.0)
+[28/Feb/2024 23:20:27] "PRI * HTTP/2.0" 505 -
+[28/Feb/2024 23:20:30] "GET /films HTTP/1.1" 301 0
+[28/Feb/2024 23:20:31] code 505, message Invalid HTTP version (2.0)
+[28/Feb/2024 23:20:31] "PRI * HTTP/2.0" 505 -
+[28/Feb/2024 23:28:08] "CONNECT www.baidu.com:443 HTTP/1.0" 404 179
+[28/Feb/2024 23:34:02] code 400, message Bad request version ('\x00\x9eÌ¨Ìª\x003\x00=\x00\x16À')
+[28/Feb/2024 23:34:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+[28/Feb/2024 23:34:14] "GET / HTTP/1.1" 302 0
+[28/Feb/2024 23:34:33] "GET /films/ HTTP/1.1" 200 14028
+[28/Feb/2024 23:34:35] "GET /favicon.ico HTTP/1.1" 404 179
+[28/Feb/2024 23:34:36] "GET /robots.txt HTTP/1.1" 404 179
+[28/Feb/2024 23:34:37] "GET /sitemap.xml HTTP/1.1" 404 179
+[29/Feb/2024 03:01:25,223] - Broken pipe from ('167.248.133.34', 44342)
+[29/Feb/2024 03:01:28] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 03:01:28,456] - Broken pipe from ('167.248.133.34', 41310)
+[29/Feb/2024 03:01:31] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 03:01:32] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 03:01:32] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 03:01:35] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 03:01:35] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 03:01:35] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 03:01:39] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 03:01:40] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 03:01:40] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 03:01:45] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 03:01:45] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 03:01:45] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 03:01:49] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 03:01:49] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 03:01:49] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 03:01:53] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 03:01:53] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 03:01:53] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 03:26:25] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 03:26:28,307] - Broken pipe from ('43.153.59.34', 40278)
+[29/Feb/2024 05:16:17] "GET /.env HTTP/1.1" 404 179
+[29/Feb/2024 06:36:18] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 06:36:19] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 07:01:02] code 400, message Bad request syntax ('MGLNDD_164.90.186.75_8000')
+[29/Feb/2024 07:01:02] "MGLNDD_164.90.186.75_8000" 400 -
+[29/Feb/2024 07:20:16,023] - Broken pipe from ('167.94.146.57', 33522)
+[29/Feb/2024 07:20:19] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 07:20:19,026] - Broken pipe from ('167.94.146.57', 52688)
+[29/Feb/2024 07:20:22] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 07:20:22] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 07:20:22] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 07:20:25] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 07:20:25] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 07:20:25] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 07:20:28] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 07:20:28] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 07:20:28] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 07:20:31] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 07:20:31] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 07:20:31] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 07:20:34] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 07:20:34] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 07:20:34] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 07:20:37] "GET /films HTTP/1.1" 301 0
+[29/Feb/2024 07:20:37] code 505, message Invalid HTTP version (2.0)
+[29/Feb/2024 07:20:37] "PRI * HTTP/2.0" 505 -
+[29/Feb/2024 08:37:34] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 09:05:07] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 09:05:07] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 304 0
+[29/Feb/2024 09:05:07] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 304 0
+[29/Feb/2024 09:05:07] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 304 0
+[29/Feb/2024 09:05:07] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 304 0
+[29/Feb/2024 09:05:07] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 304 0
+[29/Feb/2024 09:05:08] "GET /favicon.ico HTTP/1.1" 404 179
+[29/Feb/2024 10:38:48] code 400, message Bad request version ('À\x14À')
+[29/Feb/2024 10:38:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 11:52:46] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 13:47:31] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[29/Feb/2024 13:47:31] "    c                           " 400 -
+[29/Feb/2024 13:47:37] code 400, message Bad request syntax ('\xa0\x00\x00`\x00\x00\x00\x00admin\x00\x00\x00admin\x00\x00\x00\x04\x01\x00\x00\x00\x00¡ª')
+[29/Feb/2024 13:47:37] "   `    admin   admin       ¡ª" 400 -
+[29/Feb/2024 14:14:54] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 14:14:54] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 14:14:54] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 200 24712
+[29/Feb/2024 14:14:54] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 200 46159
+[29/Feb/2024 14:14:54] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 200 92394
+[29/Feb/2024 14:14:54] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 200 20588
+[29/Feb/2024 14:14:54] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 200 26892
+[29/Feb/2024 14:14:54] "GET /favicon.ico HTTP/1.1" 404 179
+[29/Feb/2024 15:19:03] code 400, message Bad request version ('\x00\x9eÌ¨Ìª\x003\x00=\x00\x16À')
+[29/Feb/2024 15:19:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 15:19:16] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 15:19:35] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 15:19:38] "GET /favicon.ico HTTP/1.1" 404 179
+[29/Feb/2024 15:19:39] "GET /robots.txt HTTP/1.1" 404 179
+[29/Feb/2024 15:19:40] "GET /sitemap.xml HTTP/1.1" 404 179
+[29/Feb/2024 16:20:45] code 400, message Bad request version ('\x7f3U\x93Ú\x0fËB¼ðx¥æã\x01\x00ð>ÓFbKtHl$ûB6¶¢ä|\x84?§\x16³-\x03pG\x05\x80V\x10¯Ó\x12/ÿë\x19\x0e,ÒþU\x9d)S\x05Ô9')
+[29/Feb/2024 16:20:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 16:20:46] code 400, message Bad request version ('Èì\x92\x8bYâ|Õ22ÉÉe\x8eó')
+[29/Feb/2024 16:20:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 16:20:46] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 16:20:46] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 16:20:46] "GET /media/posters/02-28/The_Gentlemen_poster.jpg HTTP/1.1" 200 46159
+[29/Feb/2024 16:20:46] "GET /media/posters/02-28/%D0%9E%D1%81%D1%82%D1%80%D1%96%D0%B2_%D0%BF%D1%80%D0%BE%D0%BA%D0%BB%D1%8F%D1%82%D0%B8%D1%85.jpg HTTP/1.1" 200 24712
+[29/Feb/2024 16:20:46] "GET /media/posters/02-28/Shrek_2001_animated_feature_film.jpg HTTP/1.1" 200 92394
+[29/Feb/2024 16:20:46] "GET /media/posters/02-28/Poster_of_Spider-Man-_The_Dragons_Challenge.jpeg HTTP/1.1" 200 20588
+[29/Feb/2024 16:20:46] "GET /media/posters/02-28/Poster_of_The_Amazing_Spider-Man.jpg HTTP/1.1" 200 26892
+[29/Feb/2024 16:20:46] "GET /favicon.ico HTTP/1.1" 404 179
+[29/Feb/2024 16:20:51] "GET /films/5/ HTTP/1.1" 200 6589
+[29/Feb/2024 16:20:52] code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Íúú\x00\x00\x00')
+[29/Feb/2024 16:20:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 16:20:52] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02:\x01\x00\x026\x03\x03*zy\x98+\x13\x98¼\x8aÚ)¬íüðA\x08\x89]LÅf:\x04¼H\x08ÅÙóåÇ')
+[29/Feb/2024 16:20:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 16:20:53] "GET /actors/ HTTP/1.1" 200 13970
+[29/Feb/2024 16:20:55] "GET /directors/ HTTP/1.1" 200 6437
+[29/Feb/2024 16:20:57] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 16:20:59] "GET /films/create/ HTTP/1.1" 200 7563
+[29/Feb/2024 16:21:03] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 17:59:13] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ì!«yIdÍr¸×_J\x14À\xadc\x88a\x13ÂéKø\x9b²>x/6IT^\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[29/Feb/2024 17:59:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+[29/Feb/2024 19:34:38] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 23:18:10] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 23:18:10] "GET /films/ HTTP/1.1" 200 14028
+[29/Feb/2024 23:37:40] "HEAD / HTTP/1.0" 302 0
+[29/Feb/2024 23:37:41] "GET /.git/config HTTP/1.1" 404 179
+[29/Feb/2024 23:58:03,324] - Broken pipe from ('45.79.163.53', 52590)
+[29/Feb/2024 23:58:03] "GET / HTTP/1.1" 302 0
+[29/Feb/2024 23:58:03,659] - Broken pipe from ('45.79.163.53', 52591)
+[01/Mar/2024 01:45:00] code 400, message Bad request version ('À\x14À')
+[01/Mar/2024 01:45:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+[01/Mar/2024 02:05:11,843] - Broken pipe from ('167.94.146.51', 58210)
+[01/Mar/2024 02:05:14] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 02:05:14,851] - Broken pipe from ('167.94.146.51', 59744)
+[01/Mar/2024 02:05:17] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 02:05:17] code 505, message Invalid HTTP version (2.0)
+[01/Mar/2024 02:05:17] "PRI * HTTP/2.0" 505 -
+[01/Mar/2024 02:05:20] "GET /films HTTP/1.1" 301 0
+[01/Mar/2024 02:05:20] code 505, message Invalid HTTP version (2.0)
+[01/Mar/2024 02:05:20] "PRI * HTTP/2.0" 505 -
+[01/Mar/2024 02:05:24] "GET /films HTTP/1.1" 301 0
+[01/Mar/2024 02:05:24] code 505, message Invalid HTTP version (2.0)
+[01/Mar/2024 02:05:24] "PRI * HTTP/2.0" 505 -
+[01/Mar/2024 02:05:27] "GET /films HTTP/1.1" 301 0
+[01/Mar/2024 02:05:27] code 505, message Invalid HTTP version (2.0)
+[01/Mar/2024 02:05:27] "PRI * HTTP/2.0" 505 -
+[01/Mar/2024 02:05:30] "GET /films HTTP/1.1" 301 0
+[01/Mar/2024 02:05:30] code 505, message Invalid HTTP version (2.0)
+[01/Mar/2024 02:05:30] "PRI * HTTP/2.0" 505 -
+[01/Mar/2024 02:05:33] "GET /films HTTP/1.1" 301 0
+[01/Mar/2024 02:05:33] code 505, message Invalid HTTP version (2.0)
+[01/Mar/2024 02:05:33] "PRI * HTTP/2.0" 505 -
+[01/Mar/2024 02:56:48] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 02:56:48] "GET /films/ HTTP/1.1" 200 14028
+[01/Mar/2024 03:06:59] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 03:07:11] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 03:07:11] "GET /films/ HTTP/1.1" 200 14028
+[01/Mar/2024 03:07:11,493] - Broken pipe from ('65.49.1.13', 43527)
+[01/Mar/2024 03:07:14] "GET /favicon.ico HTTP/1.1" 404 179
+[01/Mar/2024 03:07:19] "GET http://api.ipify.org/?format=json HTTP/1.1" 404 179
+[01/Mar/2024 03:07:22] "CONNECT www.shadowserver.org:443 HTTP/1.1" 404 179
+[01/Mar/2024 03:26:36] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 05:53:23] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 05:53:24] "GET /films/ HTTP/1.1" 200 14028
+[01/Mar/2024 05:53:25] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 05:53:25] "GET /films/ HTTP/1.1" 200 14028
+[01/Mar/2024 05:53:30] "GET /favicon.ico HTTP/1.1" 404 179
+[01/Mar/2024 06:40:35] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 06:40:45] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 06:52:04] code 400, message Bad request syntax ('\x01\x01æ')
+[01/Mar/2024 06:52:04] "æ" 400 -
+----------------------------------------
+Exception occurred during processing of request from ('36.99.136.137', 27954)
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.11/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.11/socketserver.py", line 755, in __init__
+    self.handle()
+  File "/root/FilmTestTask/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py", line 229, in handle
+    self.handle_one_request()
+  File "/root/FilmTestTask/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py", line 237, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: [Errno 110] Connection timed out
+----------------------------------------
+[01/Mar/2024 08:06:56] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 08:08:05] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 08:08:15] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception occurred during processing of request from ('36.99.136.137', 42256)
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.11/socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.11/socketserver.py", line 755, in __init__
+    self.handle()
+  File "/root/FilmTestTask/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py", line 229, in handle
+    self.handle_one_request()
+  File "/root/FilmTestTask/venv/lib/python3.11/site-packages/django/core/servers/basehttp.py", line 237, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: [Errno 110] Connection timed out
+----------------------------------------
+[01/Mar/2024 08:38:10] "GET /../../mnt/mtd/Config/Account1 HTTP/1.1" 404 179
+[01/Mar/2024 08:41:43] "GET /../../mnt/mtd/Config/Account2 HTTP/1.1" 404 179
+[01/Mar/2024 09:11:51] "GET / HTTP/1.0" 302 0
+[01/Mar/2024 09:19:09] "GET / HTTP/1.0" 302 0
+[01/Mar/2024 09:37:54] "GET / HTTP/1.0" 302 0
+[01/Mar/2024 10:01:40] "GET / HTTP/1.1" 302 0
+[01/Mar/2024 10:01:40] "GET /films/ HTTP/1.1" 200 14028
+[01/Mar/2024 10:37:09] code 400, message Bad request version ('À\x14À')
+[01/Mar/2024 10:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
